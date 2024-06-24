@@ -8,7 +8,7 @@ const SocialIcons = () => {
   return (
     <div
       className="social-icons"
-      style={{ display: "flex", justifyContent: "center", gap: "10px" }}
+      style={{ display: "flex", justifyContent: "center", gap: "30px" }}
     >
       <a
         href="https://www.instagram.com/ahegde3"
@@ -31,11 +31,7 @@ const SocialIcons = () => {
       >
         <FaLinkedin size={30} style={iconStyles} />
       </a>
-      <a
-        href="mailto:name@email.com"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href="mailto:name@email.com" target="_blank" rel="noopener noreferrer">
         <BiLogoGmail size={30} style={iconStyles} />
       </a>
     </div>
