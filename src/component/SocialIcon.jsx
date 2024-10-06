@@ -4,7 +4,7 @@ import { BiLogoGmail } from "react-icons/bi";
 // import "./SocialIcons.css"; // Make sure to create this file
 
 const SocialIcons = () => {
-  let iconStyles = { color: "white", fontSize: "1.5em" };
+  let iconStyles = { color: "black", fontSize: "1.5em" };
   return (
     <div
       className="social-icons"
