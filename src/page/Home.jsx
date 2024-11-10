@@ -5,9 +5,9 @@ import profilepic from "../assets/profile-pic.jpg";
 export default function Home() {
   const linkStyle = { color: "inherit", textDecoration: "none" };
   return (
-    <div>
+    <div style={{ padding: "60px" }}>
       <div style={{ marginTop: "60px" }}>
-        <img src={profilepic} alt="profile pic" width="400" height="500" />
+        <img src={profilepic} alt="profile pic" width="300" height="400" />
       </div>
       <h1 style={{ color: "black" }}>Anish Hegde</h1>
       <p>Exploring one day at a time.</p>
@@ -42,7 +42,7 @@ export default function Home() {
         >
           Reading-List
         </a>
-        <a href="/about" style={linkStyle}>
+        <a href="/#/about" style={linkStyle}>
           About
         </a>
       </div>
