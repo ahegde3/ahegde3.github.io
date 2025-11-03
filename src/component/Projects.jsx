@@ -13,33 +13,32 @@ const projects = [
     title: "N8N email reachout automation",
     description:
       "Automated email reachout to recruiters and hiring managers reading from google sheet and drafting personalized emails.",
-    technologies: ["N8N", "LLM", "Tailwind Prompt Engineering"],
-    github: "https://github.com/yourusername/project-one",
-    demo: "https://project-one.demo.com",
+    technologies: ["N8N", "LLM", "Prompt Engineering"],
+    image: "/n8n.png",
   },
   {
     title: "Resume AI ",
     description:
       "Resume AI that drafts a resume based on the user's profile and job description.",
     technologies: ["Python", "Flask", "Langchain", "LLM"],
-    github: "https://github.com/yourusername/project-two",
-    demo: "https://project-two.demo.com",
+    github: "https://github.com/ahegde3/ResumeAI",
+    image: "/resumeAI.jpg",
   },
   {
     title: "Inverter management system",
     description:
       "Inverter management system that monitors the inverter, energy production, consumption and sends alerts to the user.",
     technologies: ["Next.js", "Tailwind CSS", "TypeScript", "AWS"],
-    github: "https://github.com/yourusername/project-three",
-    demo: "https://project-three.demo.com",
+    github: "https://github.com/ahegde3/inverter-webapp",
+    image: "/inverter-system.jpg",
   },
   {
     title: "Graid AI teaching agent",
     description:
       "Graid AI teaching agent that helps student learn better and provide personalized learning experience.",
     technologies: ["GCP", "Fast API", "Agentic Programming"],
-    github: "https://github.com/yourusername/project-three",
-    demo: "https://project-three.demo.com",
+    demo: "https://graidai.com/",
+    image: "graidai_logo.jpeg",
   },
 ];
 
@@ -54,7 +53,16 @@ export function Projects() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
-            <Card key={index} className="flex flex-col">
+            <Card key={index} className="flex flex-col overflow-hidden">
+              {project.image && (
+                <div className="w-full h-48 overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              )}
               <CardHeader>
                 <CardTitle>{project.title}</CardTitle>
                 <CardDescription>{project.description}</CardDescription>
@@ -68,24 +76,28 @@ export function Projects() {
                   ))}
                 </div>
                 <div className="flex gap-3">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    <Github size={16} />
-                    <span className="text-sm">Code</span>
-                  </a>
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    <ExternalLink size={16} />
-                    <span className="text-sm">Demo</span>
-                  </a>
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      <Github size={16} />
+                      <span className="text-sm">Code</span>
+                    </a>
+                  )}
+                  {project.demo && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      <ExternalLink size={16} />
+                      <span className="text-sm">Demo</span>
+                    </a>
+                  )}
                 </div>
               </CardContent>
             </Card>

@@ -42,7 +42,7 @@ export function Navigation() {
             onClick={() => handleClick("/", "Home")}
             className="text-foreground hover:text-muted-foreground transition-colors"
           >
-            Portfolio
+            Anish Hegde
           </button>
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
