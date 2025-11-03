@@ -4,6 +4,7 @@ import Home from "./page/Home";
 import About from "./page/About";
 import { Navigation } from "./component/Navigation";
 import { Resume } from "./component/Resume";
+import { Projects } from "./component/Projects";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Navigation />
       <main>
         <Home />
+        <Projects />
         <Resume />
       </main>
       {/* <Router>

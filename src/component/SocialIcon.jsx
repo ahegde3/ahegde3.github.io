@@ -31,7 +31,7 @@ const SocialIcons = () => {
       >
         <FaLinkedin size={30} style={iconStyles} />
       </a>
-      <a href="mailto:name@email.com" target="_blank" rel="noopener noreferrer">
+      <a href="mailto:ahegde3@gmail.com" target="_blank" rel="noopener noreferrer">
         <BiLogoGmail size={30} style={iconStyles} />
       </a>
     </div>
