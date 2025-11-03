@@ -6,10 +6,7 @@ import { BiLogoGmail } from "react-icons/bi";
 const SocialIcons = () => {
   let iconStyles = { color: "black", fontSize: "1.5em" };
   return (
-    <div
-      className="social-icons"
-      style={{ display: "flex", justifyContent: "center", gap: "30px" }}
-    >
+    <div className="social-icons" style={{ display: "flex", gap: "30px" }}>
       <a
         href="https://www.instagram.com/ahegde3"
         target="_blank"
@@ -31,7 +28,11 @@ const SocialIcons = () => {
       >
         <FaLinkedin size={30} style={iconStyles} />
       </a>
-      <a href="mailto:ahegde3@gmail.com" target="_blank" rel="noopener noreferrer">
+      <a
+        href="mailto:ahegde3@gmail.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <BiLogoGmail size={30} style={iconStyles} />
       </a>
     </div>
