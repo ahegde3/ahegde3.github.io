@@ -1,8 +1,7 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import "../styles/globals.css";
 
-// import { ThemeToggle } from "./ThemeToggle";
+import { ThemeToggle } from "./ThemeToggle";
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,6 +40,12 @@ export function Navigation() {
     <nav className="fixed top-0 left-0 right-0 bg-background/80 backdrop-blur-sm border-b border-border z-50">
       <div className="max-w-5xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
+          <button
+            onClick={() => handleClick("/", "Home")}
+            className="text-foreground hover:text-muted-foreground transition-colors"
+          >
+            Portfolio
+          </button>
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
@@ -52,12 +57,12 @@ export function Navigation() {
                 {item.name}
               </button>
             ))}
-            {/* <ThemeToggle /> */}
+            <ThemeToggle />
           </div>
 
           {/* Mobile Menu Button and Theme Toggle */}
           <div className="md:hidden flex items-center gap-3">
-            {/* <ThemeToggle /> */}
+            <ThemeToggle />
             <button
               className="text-foreground"
               onClick={() => setIsOpen(!isOpen)}
