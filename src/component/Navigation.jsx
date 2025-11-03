@@ -11,7 +11,7 @@ export function Navigation() {
     { name: "Projects", href: "#projects" },
     {
       name: "Resume",
-      href: "https://drive.google.com/file/d/1X3ZVfaGYdmj9eKNU4JdS5k8sQUb9Pe2m/view?usp=sharing",
+      href: "#resume",
     },
     {
       name: "Reading",
@@ -28,9 +28,7 @@ export function Navigation() {
   };
 
   const handleClick = (href, name) => {
-    if (name === "Resume") {
-      window.open(href, "_blank");
-    } else if (name === "Reading") {
+    if (name === "Reading") {
       window.open(href, "_blank");
     } else {
       scrollToSection(href);
