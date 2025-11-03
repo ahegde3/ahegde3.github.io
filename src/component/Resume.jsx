@@ -4,31 +4,37 @@ import { Button } from "./ui/button";
 
 const experience = [
   {
-    title: "Senior Software Engineer",
-    company: "Tech Company",
-    period: "2022 - Present",
-    description:
-      "Led development of key features and mentored junior developers. Improved application performance by 40%.",
+    title: "Software Engineer Intern",
+    company: "Wave Lifsciences",
+    period: "2024 - 2024",
+  },
+  {
+    title: "Fullstack Engineer",
+    company: "Weekday",
+    period: "2022 - 2023",
   },
   {
     title: "Software Engineer",
-    company: "Startup Inc",
+    company: "Merkle",
     period: "2020 - 2022",
-    description:
-      "Built scalable web applications and collaborated with cross-functional teams to deliver projects on time.",
+  },
+  {
+    title: "Software Engineer Intern",
+    company: "Samsung R&D Institute Bangalore",
+    period: "2020 - 2022",
   },
 ];
 
 const education = [
   {
     degree: "Master of Computer Science",
-    school: "University Name",
-    period: "2018 - 2020",
+    school: "Northeastern University",
+    period: "2023 - 2025",
   },
   {
     degree: "Bachelor of Computer Science",
-    school: "College Name",
-    period: "2014 - 2018",
+    school: "Manipal Institute of Technology",
+    period: "2016 - 2020",
   },
 ];
 
