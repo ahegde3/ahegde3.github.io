@@ -1,9 +1,8 @@
 import React from "react";
-import SocialIcons from "../component/SocialIcon";
 import profilepic from "../assets/profile-pic.jpg";
 
 export default function Home() {
-  const linkStyle = { color: "inherit", textDecoration: "none" };
+
   return (
     <div
       id="home"
