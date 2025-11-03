@@ -1,18 +1,20 @@
-import "./App.css";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import "./styles/globals.css";
 import Home from "./page/Home";
-import About from "./page/About";
+import { Navigation } from "./component/Navigation";
+import { Resume } from "./component/Resume";
+import { Projects } from "./component/Projects";
+import { Contact } from "./component/Contact";
 
 function App() {
   return (
     <div className="App">
-      {/* <Home /> */}
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
-      </Router>
+      <Navigation />
+      <main>
+        <Home />
+        <Contact />
+        <Projects />
+        <Resume />
+      </main>
     </div>
   );
 }
