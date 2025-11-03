@@ -1,28 +1,45 @@
-import { ExternalLink, Github } from 'lucide-react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
-import { Badge } from './ui/badge';
+import { ExternalLink, Github } from "lucide-react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "./ui/card";
+import { Badge } from "./ui/badge";
 
 const projects = [
   {
-    title: 'Project One',
-    description: 'A modern web application built with React and TypeScript. Features real-time updates and a clean user interface.',
-    technologies: ['React', 'TypeScript', 'Tailwind CSS'],
-    github: 'https://github.com/yourusername/project-one',
-    demo: 'https://project-one.demo.com',
+    title: "N8N email reachout automation",
+    description:
+      "Automated email reachout to recruiters and hiring managers reading from google sheet and drafting personalized emails.",
+    technologies: ["N8N", "LLM", "Tailwind Prompt Engineering"],
+    github: "https://github.com/yourusername/project-one",
+    demo: "https://project-one.demo.com",
   },
   {
-    title: 'Project Two',
-    description: 'Full-stack application with advanced data visualization and analytics capabilities.',
-    technologies: ['Node.js', 'Express', 'MongoDB', 'D3.js'],
-    github: 'https://github.com/yourusername/project-two',
-    demo: 'https://project-two.demo.com',
+    title: "Resume AI ",
+    description:
+      "Resume AI that drafts a resume based on the user's profile and job description.",
+    technologies: ["Python", "Flask", "Langchain", "LLM"],
+    github: "https://github.com/yourusername/project-two",
+    demo: "https://project-two.demo.com",
   },
   {
-    title: 'Project Three',
-    description: 'Mobile-first responsive design system and component library used across multiple projects.',
-    technologies: ['React', 'Storybook', 'CSS-in-JS'],
-    github: 'https://github.com/yourusername/project-three',
-    demo: 'https://project-three.demo.com',
+    title: "Inverter management system",
+    description:
+      "Inverter management system that monitors the inverter, energy production, consumption and sends alerts to the user.",
+    technologies: ["Next.js", "Tailwind CSS", "TypeScript", "AWS"],
+    github: "https://github.com/yourusername/project-three",
+    demo: "https://project-three.demo.com",
+  },
+  {
+    title: "Graid AI teaching agent",
+    description:
+      "Graid AI teaching agent that helps student learn better and provide personalized learning experience.",
+    technologies: ["GCP", "Fast API", "Agentic Programming"],
+    github: "https://github.com/yourusername/project-three",
+    demo: "https://project-three.demo.com",
   },
 ];
 
