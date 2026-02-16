@@ -11,10 +11,10 @@ function App() {
       <Navigation />
       <main>
         <Home />
-        <Contact />
         <Projects />
         <Resume />
       </main>
+      <Contact />
     </div>
   );
 }
