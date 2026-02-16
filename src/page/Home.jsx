@@ -46,7 +46,7 @@ export default function Home() {
       <div className="max-w-xl mb-8 mx-auto text-center">
         <p className="mb-4" style={{ color: "var(--foreground)", lineHeight: "1.8" }}>
           I specialize in building large-scale, production-grade software — from
-          scalable backend systems and full-stack apps to agentic GenAI
+          scalable backend systems and full-stack apps to Agentic GenAI
           workflows.
         </p>
         <p className="mb-6" style={{ color: "var(--muted)" }}>
@@ -55,15 +55,6 @@ export default function Home() {
           Northeastern University.
         </p>
         <Contact />
-        {/* <a
-          href="https://www.linkedin.com/in/anish-hegde-940823120/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="link-arrow"
-        >
-          More about me
-          <ChevronRight size={14} />
-        </a> */}
       </div>
     </section>
   );

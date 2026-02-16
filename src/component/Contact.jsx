@@ -1,88 +1,57 @@
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
 
+const socials = [
+  {
+    icon: FaGithub,
+    href: "https://github.com/ahegde3",
+    label: "GitHub",
+  },
+  {
+    icon: FaLinkedin,
+    href: "https://www.linkedin.com/in/anish-hegde-940823120/",
+    label: "LinkedIn",
+  },
+  {
+    icon: BiLogoGmail,
+    href: "mailto:ahegde3@gmail.com",
+    label: "Email",
+  },
+];
+
 export function Contact() {
-  const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "Projects", href: "#projects" },
-    { name: "Resume", href: "#resume" },
-  ];
-
-  const scrollToSection = (href) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
-    <footer id="contact" className="footer">
-      {/* Top row: links + socials */}
-      <div className="footer-inner">
-        <div className="footer-links">
-          {navLinks.map((link) => (
-            <button
-              key={link.name}
-              onClick={() => scrollToSection(link.href)}
-              style={{
-                background: "none",
-                border: "none",
-                cursor: "pointer",
-                font: "inherit",
-                color: "inherit",
-                fontSize: "inherit",
-              }}
-            >
-              {link.name}
-            </button>
-          ))}
-          <a
-            href="mailto:ahegde3@gmail.com"
-            style={{ color: "inherit" }}
-          >
-            Contact
-          </a>
-        </div>
-
-        <div className="footer-social">
-          <a
-            href="https://github.com/ahegde3"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub"
-          >
-            <FaGithub size={16} />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/anish-hegde-940823120/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-          >
-            <FaLinkedin size={16} />
-          </a>
-          <a
-            href="mailto:ahegde3@gmail.com"
-            aria-label="Email"
-          >
-            <BiLogoGmail size={16} />
-          </a>
-        </div>
-      </div>
-
-      {/* Pixel art footer */}
-      <div className="footer-art">
-        <img
-          src="/footer-pixel-art.png"
-          alt="Pixel art cityscape"
-          loading="lazy"
-        />
-      </div>
-
-      {/* Copyright */}
-      <div className="footer-bottom">
-        <p>© Anish Hegde {new Date().getFullYear()}</p>
-      </div>
-    </footer>
+    <div className="flex items-center justify-center gap-4 mt-8">
+      {socials.map(({ icon: Icon, href, label }) => (
+        <a
+          key={label}
+          href={href}
+          target={href.startsWith("mailto") ? undefined : "_blank"}
+          rel="noopener noreferrer"
+          aria-label={label}
+          style={{
+            width: "2.75rem",
+            height: "2.75rem",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            borderRadius: "50%",
+            border: "1px solid var(--border-strong)",
+            color: "var(--muted)",
+            transition: "all 0.25s ease",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.borderColor = "var(--foreground)";
+            e.currentTarget.style.color = "var(--foreground)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.borderColor = "var(--border-strong)";
+            e.currentTarget.style.color = "var(--muted)";
+          }}
+        >
+          <Icon size={18} />
+        </a>
+      ))}
+    </div>
   );
 }

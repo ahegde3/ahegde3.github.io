@@ -13,6 +13,9 @@ function App() {
         <Projects />
         <Resume />
       </main>
+      <div className="footer-bottom">
+        <p>© Anish Hegde {new Date().getFullYear()}</p>
+      </div>
     </div>
   );
 }
