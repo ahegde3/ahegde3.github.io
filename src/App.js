@@ -3,7 +3,6 @@ import Home from "./page/Home";
 import { Navigation } from "./component/Navigation";
 import { Resume } from "./component/Resume";
 import { Projects } from "./component/Projects";
-import { Contact } from "./component/Contact";
 
 function App() {
   return (
@@ -11,10 +10,12 @@ function App() {
       <Navigation />
       <main>
         <Home />
-        <Contact />
         <Projects />
         <Resume />
       </main>
+      <div className="footer-bottom">
+        <p>© Anish Hegde {new Date().getFullYear()}</p>
+      </div>
     </div>
   );
 }
