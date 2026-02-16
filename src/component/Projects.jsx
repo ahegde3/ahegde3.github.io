@@ -2,6 +2,20 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
+    title: "Where Is My Newsletter",
+    description:
+      "A Chrome extension that helps you send personalized template messages on LinkedIn. Auto-extracts recipient names and injects messages directly into LinkedIn's message composer based on specified templates.",
+    technologies: ["N8N", "LLM", "Prompt Engineering"],
+    demo: "https://where-is-my-newsletter-h3qz.vercel.app",
+  },
+  {
+    title: "LetsReachout",
+    description:
+      "A Chrome extension that helps you send personalized template messages on LinkedIn. Auto-extracts recipient names and injects messages directly into LinkedIn's message composer based on specified templates.",
+    technologies: ["TypeScript", "Chrome Extension", "React"],
+    github: "https://github.com/ahegde3/LetsReachout",
+  },
+  {
     title: "N8N Email Automation",
     description:
       "Automated email outreach to recruiters and hiring managers — reads from Google Sheets and drafts personalized emails.",
@@ -27,19 +41,7 @@ const projects = [
       "AI teaching agent that provides personalized learning experiences for students.",
     technologies: ["GCP", "Fast API", "Agentic Programming"],
     demo: "https://graidai.com/",
-  },
-  {
-    title: "Design Culture",
-    description:
-      "It's not enough to make functional products — they must be beautiful and delightful to use.",
-    technologies: ["UI/UX", "Product Design"],
-  },
-  {
-    title: "Ship Fast, Iterate",
-    description:
-      "Scope small. Ship fast. Iterate in tight loops close to real feedback.",
-    technologies: ["Agile", "CI/CD"],
-  },
+  }
 ];
 
 export function Projects() {
