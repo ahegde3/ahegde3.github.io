@@ -49,10 +49,8 @@ export default function Home() {
           scalable backend systems and full-stack apps to Agentic GenAI
           workflows.
         </p>
-        <p className="mb-6" style={{ color: "var(--muted)" }}>
-          My stack includes Python, Golang, JavaScript/TypeScript, C/C++, Java,
-          and cloud-native development. Currently pursuing my Master's at
-          Northeastern University.
+        <p className="mb-6" style={{ color: "var(--foreground)" }}>
+          Have experience in building for startups to major MNC.
         </p>
         <Contact />
       </div>
