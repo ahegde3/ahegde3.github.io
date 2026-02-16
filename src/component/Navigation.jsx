@@ -1,10 +1,11 @@
 import { Menu, X, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
-import { ThemeToggle } from "./ThemeToggle";
+import { useTheme, ThemeToggle } from "./ThemeToggle";
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -15,7 +16,7 @@ export function Navigation() {
   const navItems = [
     { name: "Home", href: "#home" },
     { name: "Projects", href: "#projects" },
-    { name: "Resume", href: "#resume" },
+    // { name: "Resume", href: "#resume" },
     {
       name: "Reading",
       href: "https://docs.google.com/spreadsheets/d/19eSMeadP2v6TbMUOlcDaztG-tpHgOFkAjYAc9kilikY/edit?usp=sharing",
@@ -51,7 +52,8 @@ export function Navigation() {
         }}
       >
         <button
-          onClick={() => scrollToSection("#home")}
+          onClick={toggleTheme}
+          aria-label="Toggle theme"
           style={{
             padding: "0.5rem 0.75rem",
             display: "flex",
@@ -72,8 +74,6 @@ export function Navigation() {
             {item.name}
           </button>
         ))}
-
-        <ThemeToggle />
 
         <button
           className="nav-cta"

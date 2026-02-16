@@ -1,5 +1,6 @@
 import React from "react";
 import { ChevronRight } from "lucide-react";
+import { Contact } from "../component/Contact";
 import profilepic from "../assets/profile-pic.jpg";
 
 export default function Home() {
@@ -29,10 +30,10 @@ export default function Home() {
       </div>
 
       {/* Inspirational quote - GIC style */}
-      <div className="grid md:grid-cols-2 gap-12 items-start mb-16">
+      <div className="flex flex-col items-center text-center mb-16 max-w-2xl mx-auto">
         <div>
           <h2 className="font-heading" style={{ lineHeight: "1.2" }}>
-            Build the world you'd like to live in. Ship fast. Make beautiful
+            Ship fast. Make beautiful
             things.
           </h2>
           <p className="mt-4 text-sm" style={{ color: "var(--muted)" }}>
@@ -42,7 +43,7 @@ export default function Home() {
       </div>
 
       {/* About text */}
-      <div className="max-w-xl mb-8">
+      <div className="max-w-xl mb-8 mx-auto text-center">
         <p className="mb-4" style={{ color: "var(--foreground)", lineHeight: "1.8" }}>
           I specialize in building large-scale, production-grade software — from
           scalable backend systems and full-stack apps to agentic GenAI
@@ -53,7 +54,8 @@ export default function Home() {
           and cloud-native development. Currently pursuing my Master's at
           Northeastern University.
         </p>
-        <a
+        <Contact />
+        {/* <a
           href="https://www.linkedin.com/in/anish-hegde-940823120/"
           target="_blank"
           rel="noopener noreferrer"
@@ -61,7 +63,7 @@ export default function Home() {
         >
           More about me
           <ChevronRight size={14} />
-        </a>
+        </a> */}
       </div>
     </section>
   );
