@@ -17,6 +17,23 @@
   --card-dark-border: rgba(255, 255, 255, 0.1);
   --card-dark-text: #e5e5e5;
   --radius: 0.75rem;
+  --nav-bg: rgba(247, 247, 247, 0.85);
+  --nav-hover: rgba(0, 0, 0, 0.05);
+}
+
+.dark {
+  --background: #111116;
+  --foreground: #e8e8ed;
+  --muted: #8a8a9a;
+  --accent: #e8e8ed;
+  --accent-foreground: #111116;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.15);
+  --card-dark: #1a1a22;
+  --card-dark-border: rgba(255, 255, 255, 0.1);
+  --card-dark-text: #c8c8d0;
+  --nav-bg: rgba(17, 17, 22, 0.85);
+  --nav-hover: rgba(255, 255, 255, 0.08);
 }
 
 @layer base {
@@ -41,7 +58,10 @@
     letter-spacing: -0.15px;
   }
 
-  h1, h2, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     font-family: var(--font-heading);
     font-weight: 500;
     line-height: 1.15;
@@ -87,6 +107,7 @@
 /* ---- GIC Design Utilities ---- */
 
 @layer components {
+
   /* Floating pill navigation */
   .nav-pill {
     position: fixed;
@@ -98,7 +119,7 @@
     align-items: center;
     gap: 0.25rem;
     padding: 0.5rem 0.75rem;
-    background: rgba(247, 247, 247, 0.85);
+    background: var(--nav-bg);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid var(--border);
@@ -158,8 +179,8 @@
   .section-dark {
     background-color: var(--card-dark);
     background-image:
-      linear-gradient(135deg, rgba(255,255,255,0.02) 0%, transparent 50%),
-      linear-gradient(-135deg, rgba(255,255,255,0.02) 0%, transparent 50%);
+      linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, transparent 50%),
+      linear-gradient(-135deg, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
     border-radius: 1.5rem;
     margin: 0 1rem;
     padding: 4rem 2rem;

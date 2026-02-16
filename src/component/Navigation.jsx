@@ -1,5 +1,6 @@
 import { Menu, X, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
+import { ThemeToggle } from "./ThemeToggle";
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -72,6 +73,8 @@ export function Navigation() {
           </button>
         ))}
 
+        <ThemeToggle />
+
         <button
           className="nav-cta"
           onClick={() =>
@@ -90,26 +93,31 @@ export function Navigation() {
       <nav
         className="md:hidden fixed top-4 left-4 right-4 z-50 flex items-center justify-between px-4 py-3 rounded-full"
         style={{
-          background: "rgba(247, 247, 247, 0.85)",
+          background: "var(--nav-bg)",
           backdropFilter: "blur(20px)",
           WebkitBackdropFilter: "blur(20px)",
-          border: "1px solid rgba(0,0,0,0.08)",
+          border: "1px solid var(--border)",
           boxShadow: "0 2px 20px rgba(0,0,0,0.06)",
         }}
       >
         <button
           onClick={() => scrollToSection("#home")}
           className="text-sm font-medium"
+          style={{ color: "var(--foreground)" }}
         >
           AH
         </button>
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle menu"
-          className="p-1"
-        >
-          {isOpen ? <X size={20} /> : <Menu size={20} />}
-        </button>
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
+            className="p-1"
+            style={{ color: "var(--foreground)" }}
+          >
+            {isOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile dropdown */}
@@ -117,10 +125,10 @@ export function Navigation() {
         <div
           className="md:hidden fixed top-16 left-4 right-4 z-50 rounded-2xl p-4 flex flex-col gap-2"
           style={{
-            background: "rgba(247, 247, 247, 0.95)",
+            background: "var(--nav-bg)",
             backdropFilter: "blur(20px)",
             WebkitBackdropFilter: "blur(20px)",
-            border: "1px solid rgba(0,0,0,0.08)",
+            border: "1px solid var(--border)",
             boxShadow: "0 8px 40px rgba(0,0,0,0.1)",
           }}
         >
@@ -128,14 +136,18 @@ export function Navigation() {
             <button
               key={item.name}
               onClick={() => handleClick(item)}
-              className="text-left py-2 px-3 rounded-lg text-sm font-medium hover:bg-black/5 transition-colors"
+              className="text-left py-2 px-3 rounded-lg text-sm font-medium transition-colors"
+              style={{ color: "var(--foreground)" }}
             >
               {item.name}
             </button>
           ))}
           <button
-            className="mt-1 py-2 px-4 rounded-full text-sm font-medium text-white text-center"
-            style={{ background: "#282834" }}
+            className="mt-1 py-2 px-4 rounded-full text-sm font-medium text-center"
+            style={{
+              background: "var(--accent)",
+              color: "var(--accent-foreground)",
+            }}
             onClick={() =>
               window.open(
                 "https://drive.google.com/file/d/1X3ZVfaGYdmj9eKNU4JdS5k8sQUb9Pe2m/view?usp=sharing",
